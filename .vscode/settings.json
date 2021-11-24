@@ -1,0 +1,45 @@
+{
+    "deploy": {
+        "packages": [
+            {
+                "name": "Deploy to Prod",
+                "button": {
+                    "text": "Deploy to Prod",
+                    "tooltip": "Deploy to Prod using FTP",
+                    "targets": [
+                        "FTP PROD"
+                    ],
+                },
+                "files": [
+                    "dist/**"
+                ],
+                "deployOnSave": false,
+                "deployOnChange": false
+            }
+        ],
+        "targets": [
+            {
+                "type": "ftp",
+                "name": "FTP PROD",
+                "description": "A FTP folder",
+                "dir": "/",
+                "host": "ftp.bunheaddesign.com",
+                "port": 21,
+                "secure": false,
+                "user": "ftpbear@babysarahbear.com",
+                "password": "z_#~n4@d^[ju",
+                "mappings": [
+                    {
+                        "source": "/dist",
+                        "target": "/baby-sarah-bear"
+
+                    }
+                ],
+                // "connected": [
+                //     // "DELE  one-file.txt"
+                //     // "MLSD  /"
+                // ]
+            }
+        ]
+    },
+}

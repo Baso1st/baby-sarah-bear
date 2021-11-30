@@ -2,29 +2,32 @@ import { Component, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular
 import { Player } from '@vime/angular';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnChanges {
 
-    @ViewChild('player') player!: Player;
+  @ViewChild('musicPlayer') musicPlayer!: Player;
+  @ViewChild('clipPlayer') clipPlayer!: Player;
 
-    ngOnInit() {
-    }
+  ngOnInit() {
+  }
 
-    async ngOnChanges(changes: SimpleChanges): Promise<void> {
-    }
+  async ngOnChanges(changes: SimpleChanges): Promise<void> {
+  }
 
-    async onPageClick() {
-        var canPlay = await this.player.canAutoplay();
-        if (canPlay) {
-            if (this.player.playing) {
-                this.player.pause();
-            } else {
-                this.player.play();
-            }
-        }
+  async onPageClick() {
+    if (this.musicPlayer.playing) {
+      this.musicPlayer.pause();
+    } else {
+      this.musicPlayer.play();
     }
+  }
+
+  onSnowFlakeClick() {
+    // ToDo: Play one of the voice clips here. 
+    // this.clipPlayer.play()
+  }
 
 }

@@ -1,6 +1,6 @@
 <div class="main-dev" (click)="onPageClick()">
 
-<!-- <div class="snow"></div>
+  <!-- <div class="snow" (click)="onSnowFlakeClick()"></div>
 <div class="snow"></div>
 <div class="snow"></div>
 <div class="snow"></div>
@@ -16,10 +16,16 @@
 <div class="snow"></div>
 <div class="snow"></div> -->
 
-    <vm-player #player>
-        <vm-audio>
-            <source data-src="/assets/music.mp3" type="audio/mp3" />
-        </vm-audio>
-    </vm-player>
+  <vm-player #musicPlayer>
+    <vm-audio>
+      <source data-src="/assets/music.mp3" type="audio/mp3" />
+    </vm-audio>
+  </vm-player>
+
+  <vm-player #clipPlayer>
+    <vm-audio>
+      <source data-src="/assets/music.mp3" type="audio/mp3" />
+    </vm-audio>
+  </vm-player>
 
 </div>

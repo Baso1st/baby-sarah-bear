@@ -1,3 +1,7 @@
 # BabySarahBear
 
-A cute gesture for Sarah's Birthday
+## Sarah's Christmas gift.
+
+---------------------------
+
+### To build the project for production use: ``` ng build -c produciton ```

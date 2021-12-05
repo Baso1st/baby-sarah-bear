@@ -6,20 +6,15 @@ import { Player } from '@vime/angular';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnChanges {
+export class AppComponent {
 
   @ViewChild('musicPlayer') musicPlayer!: Player;
   @ViewChild('clipPlayer') clipPlayer!: Player;
 
-  ngOnInit() {
-  }
-
-  async ngOnChanges(changes: SimpleChanges): Promise<void> {
-  }
 
   async onPageClick() {
     await this.musicPlayer.play();
-    // await this.clipPlayer.play();
+    await this.clipPlayer.play();
 
 
     // if (!this.musicPlayer.playing) {

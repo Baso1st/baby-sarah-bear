@@ -1,4 +1,12 @@
-import { Component, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges, ViewChild, ViewEncapsulation } from '@angular/core';
+
+import { SwiperComponent } from "swiper/angular";
+
+// import Swiper core and required modules
+import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper";
+
+// install Swiper modules
+SwiperCore.use([EffectFade, Navigation, Pagination]);
 
 @Component({
   selector: 'app-root',
@@ -10,6 +18,15 @@ export class AppComponent {
   isMainAudioPlaying = false;
   clipNumber = 1;
   maximumClipCount = 6;
+  imageSources = [
+    '1.jpg',
+    '2.jpg',
+    '3.jpg',
+    '4.jpg',
+    '5.jpg',
+    '6.jpg',
+    '7.jpg'
+  ]
 
   onPageClick() {
     if (this.isMainAudioPlaying) {

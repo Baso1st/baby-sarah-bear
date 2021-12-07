@@ -21,14 +21,12 @@ export class AppComponent {
 
   
   imageSources = [
-    '1.jpg',
-    '2.jpg',
-    '3.jpg',
-    '4.jpg',
-    '5.jpg',
-    '6.jpg',
-    '7.jpg'
+    ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+    ['4.jpg', '5.jpg', '6.jpg', '7.jpg'],
+    ['8.jpg', '9.jpg', '10.jpg', '11.jpg'],
+    ['12.jpg', '13.jpg', '14.jpg', '15.jpg']
   ]
+
 
   onPageClick() {
     if (this.isMainAudioPlaying) {
@@ -52,6 +50,15 @@ export class AppComponent {
     if (this.clipNumber > this.maximumClipCount) {
       this.clipNumber = 1;
     }
+  }
+
+  get2dImageSourcesArray() {
+    let tmp = [];
+    let chunkSize = 4;
+    for(var i = 0; i < this.imageSources.length; i += chunkSize) {
+        tmp.push(this.imageSources.slice(i, i + chunkSize));
+    }
+    return tmp;
   }
 
 }

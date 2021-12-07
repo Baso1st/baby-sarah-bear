@@ -2,11 +2,15 @@
 
   <div class="col-12 col-xxl-6 bg-warning">
 
-    <div *ngFor="let imageSource of imageSources" class="d-lg-none">
-      <img [src]="'/assets/fake-pics/' + imageSource" alt="We lost this pic" width="500" height="600">
+    <div class="d-none d-lg-block">
+      <div *ngFor="let imageSubset of imageSources" class="row">
+        <div *ngFor="let imageSource of imageSubset" class="col border border-dark">
+          <img [src]="'/assets/fake-pics/' + imageSource" alt="We lost this pic" >
+        </div>
+      </div>
     </div>
 
-    <div class="d-md-none">
+    <div class="d-lg-none">
       <swiper [effect]="'coverflow'" [grabCursor]="true" [centeredSlides]="true" [slidesPerView]="'auto'" 
       [coverflowEffect]="{
           rotate: 50,
@@ -26,7 +30,6 @@
         <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-9.jpg" /></ng-template>
       </swiper>
     </div>
-
 
   </div>
   <div class="col-12 col-xxl-6 bg-dark text-white">

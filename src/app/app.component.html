@@ -1,38 +1,39 @@
 <div class="main-dev row" (click)="onPageClick()">
 
-  <div class="col-12 col-xxl-6 bg-warning">
-
-    <div class="d-none d-lg-block">
-      <div *ngFor="let imageSubset of imageSources" class="row">
-        <div *ngFor="let imageSource of imageSubset" class="col border border-dark">
-          <img [src]="'/assets/fake-pics/' + imageSource" alt="We lost this pic" >
-        </div>
+  <div class="col-12 col-xxl-6">
+    <div class="mt-5 pt-5">
+      <div class="d-none d-lg-block">
+        <!-- <div *ngFor="let imageSubset of get2dImageSourcesArray()" class="row">
+          <div *ngFor="let imageSource of imageSubset" class="col">
+            <img [src]="'/assets/fake-pics/' + imageSource" alt="We lost this pic">
+          </div>
+        </div> -->
+        <img *ngFor="let imageSource of imageSources" [src]="'/assets/fake-pics/' + imageSource" alt="We lost this pic" >
       </div>
-    </div>
 
-    <div class="d-lg-none">
-      <swiper [effect]="'coverflow'" [grabCursor]="true" [centeredSlides]="true" [slidesPerView]="'auto'" 
-      [coverflowEffect]="{
+      <div class="d-lg-none">
+        <swiper [effect]="'coverflow'" [grabCursor]="true" [centeredSlides]="true" [slidesPerView]="'auto'"
+          [coverflowEffect]="{
           rotate: 50,
           stretch: 0,
           depth: 100,
           modifier: 1,
-          slideShadows: true}" 
-        [pagination]="true" class="mySwiper">
-        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-1.jpg" /></ng-template>
-        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-2.jpg" /></ng-template>
-        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-3.jpg" /></ng-template>
-        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-4.jpg" /></ng-template>
-        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-5.jpg" /></ng-template>
-        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-6.jpg" /></ng-template>
-        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-7.jpg" /></ng-template>
-        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-8.jpg" /></ng-template>
-        <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-9.jpg" /></ng-template>
-      </swiper>
+          slideShadows: true}" [pagination]="true" class="mySwiper">
+          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-1.jpg" /></ng-template>
+          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-2.jpg" /></ng-template>
+          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-3.jpg" /></ng-template>
+          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-4.jpg" /></ng-template>
+          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-5.jpg" /></ng-template>
+          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-6.jpg" /></ng-template>
+          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-7.jpg" /></ng-template>
+          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-8.jpg" /></ng-template>
+          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-9.jpg" /></ng-template>
+        </swiper>
+      </div>
     </div>
 
   </div>
-  <div class="col-12 col-xxl-6 bg-dark text-white">
+  <div class="col-12 col-xxl-6 text-white">
     <div class="m-5 p-5">
       <h4>Tackle Writers' Block</h4>
       <p>
@@ -73,7 +74,7 @@
     </div>
   </div>
 
-  <!-- <div class="snow" (click)="onSnowFlakeClick()"></div>
+  <div class="snow" (click)="onSnowFlakeClick()"></div>
   <div class="snow" (click)="onSnowFlakeClick()"></div>
   <div class="snow" (click)="onSnowFlakeClick()"></div>
   <div class="snow" (click)="onSnowFlakeClick()"></div>
@@ -91,6 +92,6 @@
   <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
   <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
   <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div> -->
+  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
 
 </div>

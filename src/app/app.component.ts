@@ -21,11 +21,18 @@ export class AppComponent {
 
   
   imageSources = [
-    ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
-    ['4.jpg', '5.jpg', '6.jpg', '7.jpg'],
-    ['8.jpg', '9.jpg', '10.jpg', '11.jpg'],
-    ['12.jpg', '13.jpg', '14.jpg', '15.jpg']
+    '1.jpg', '2.jpg', '3.jpg', '4.jpg',
+    '5.jpg', '6.jpg', '7.jpg',
+    '8.jpg', '9.jpg', '10.jpg', '11.jpg',
+    '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg'
   ]
+
+  // imageSources = [
+  //   ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+  //   ['5.jpg', '6.jpg', '7.jpg','8.jpg'],
+  //   ['9.jpg', '10.jpg', '11.jpg','12.jpg'],
+  //   ['13.jpg', '14.jpg', '15.jpg', '16.jpg']
+  // ]
 
 
   onPageClick() {
@@ -54,7 +61,7 @@ export class AppComponent {
 
   get2dImageSourcesArray() {
     let tmp = [];
-    let chunkSize = 4;
+    let chunkSize = 3;
     for(var i = 0; i < this.imageSources.length; i += chunkSize) {
         tmp.push(this.imageSources.slice(i, i + chunkSize));
     }

@@ -3,12 +3,12 @@
   <div class="col-12 col-xxl-6">
     <div class="mt-5 pt-5">
       <div class="d-none d-lg-block">
-        <!-- <div *ngFor="let imageSubset of get2dImageSourcesArray()" class="row">
+        <div *ngFor="let imageSubset of get2dImageSourcesArray()" class="row">
           <div *ngFor="let imageSource of imageSubset" class="col">
             <img [src]="'/assets/fake-pics/' + imageSource" alt="We lost this pic">
           </div>
-        </div> -->
-        <img *ngFor="let imageSource of imageSources" [src]="'/assets/fake-pics/' + imageSource" alt="We lost this pic" >
+        </div>
+        <!-- <img *ngFor="let imageSource of imageSources" [src]="'/assets/fake-pics/' + imageSource" alt="We lost this pic" > -->
       </div>
 
       <div class="d-lg-none">

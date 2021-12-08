@@ -1,17 +1,79 @@
 <div class="main-dev row" (click)="onPageClick()">
 
   <div class="col-12 col-xxl-6">
+
     <div class="mt-5 pt-5">
-      <div class="d-none d-lg-block">
+      <!-- <div class="d-none d-lg-block">
         <div *ngFor="let imageSubset of get2dImageSourcesArray()" class="row">
           <div *ngFor="let imageSource of imageSubset" class="col">
             <img [src]="'/assets/fake-pics/' + imageSource" alt="We lost this pic">
           </div>
         </div>
-        <!-- <img *ngFor="let imageSource of imageSources" [src]="'/assets/fake-pics/' + imageSource" alt="We lost this pic" > -->
-      </div>
+      </div> -->
 
-      <div class="d-lg-none">
+      <div #Collage>
+        <div class="row">
+          <div class="col">
+            <img src="/assets/fake-pics/1.jpg" alt="We lost this pic">
+          </div>
+          <div class="col">
+            <img src="/assets/fake-pics/2.jpg" alt="We lost this pic">
+          </div>
+          <div class="col">
+            <!-- Left Empty intentionally for white spaces -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <img src="/assets/fake-pics/3.jpg" alt="We lost this pic">
+          </div>
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <img src="/assets/fake-pics/4.jpg" alt="We lost this pic">
+              </div>
+              <div class="col">
+                <!-- Left Empty intentionally for white spaces -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <img src="/assets/fake-pics/5.jpg" alt="We lost this pic">
+              </div>
+              <div class="col">
+                <img src="/assets/fake-pics/6.jpg" alt="We lost this pic">
+              </div>
+              <div class="col">
+                <img src="/assets/fake-pics/7.jpg" alt="We lost this pic">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <img src="/assets/fake-pics/8.jpg" alt="We lost this pic">
+              </div>
+              <div class="col">
+                <img src="/assets/fake-pics/9.jpg" alt="We lost this pic">
+              </div>
+              <div class="col">
+                <!-- Left Empty intentionally for white spaces -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <img src="/assets/fake-pics/10.jpg" alt="We lost this pic">
+          </div>
+          <div class="col">
+            <img src="/assets/fake-pics/11.jpg" alt="We lost this pic">
+          </div>
+          <div class="col">
+            <!-- Left Empty intentionally for white spaces -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="d-lg-none" #Swiper>
         <swiper [effect]="'coverflow'" [grabCursor]="true" [centeredSlides]="true" [slidesPerView]="'auto'"
           [coverflowEffect]="{
           rotate: 50,
@@ -30,9 +92,11 @@
           <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-9.jpg" /></ng-template>
         </swiper>
       </div>
+
     </div>
 
   </div>
+
   <div class="col-12 col-xxl-6 text-white">
     <div class="m-5 p-5">
       <h4>Tackle Writers' Block</h4>

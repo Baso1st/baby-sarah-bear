@@ -8,11 +8,23 @@ img {
   height: auto;
 }
 
-.col {
-  padding: 0 !important;
+// .col {
+//   padding: 0 !important;
+// }
+
+// .second-image {
+//   z-index: 500 !important;
+//   margin-left: -20px !important;
+// }
+
+.first-pic-row {
+  background-color: #f0edee !important;
 }
 
-.second-image {
-  z-index: 500 !important;
-  margin-left: -20px !important;
+.text-div {
+  font-size: 6vw;
+  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 900;
+  font-style: normal;
 }

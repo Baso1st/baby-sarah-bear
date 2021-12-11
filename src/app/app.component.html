@@ -1,161 +1,64 @@
-<div class="main-dev row" (click)="onPageClick()">
+<div class="main-dev" (click)="onPageClick()">
 
-  <div class="col-12 col-xxl-6">
+  <!-- <div class="snow-1" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-1" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-2" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-2" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-3" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-3" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-4" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-4" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-5" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-5" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-6" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-6" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-7" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-7" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-8" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-8" (click)="onSnowFlakeClick()"></div> -->
 
-    <div class="mt-5 pt-5">
-      <!-- <div class="d-none d-lg-block">
-        <div *ngFor="let imageSubset of get2dImageSourcesArray()" class="row">
-          <div *ngFor="let imageSource of imageSubset" class="col">
-            <img [src]="'/assets/fake-pics/' + imageSource" alt="We lost this pic">
-          </div>
-        </div>
-      </div> -->
 
-      <div #Collage>
-        <div class="row">
-          <div class="col">
-            <img src="/assets/fake-pics/1.jpg" alt="We lost this pic">
-          </div>
-          <div class="col">
-            <img src="/assets/fake-pics/2.jpg" alt="We lost this pic" class="second-image">
-          </div>
-          <div class="col">
-            <!-- Left Empty intentionally for white spaces -->
-          </div>
+
+
+  <!-- <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
+  <div class="snow-bear" (click)="onSnowFlakeClick()"></div> -->
+
+  <div class="row first-row mt-5">
+    <div class="col-12 col-xxl-7 first-pic-row">
+      <div class="row mt-5 pt-5">
+        <div class="col-9">
+          <img src="/assets/pics/1.png" alt="We lost this pic">
         </div>
-        <div class="row">
-          <div class="col">
-            <img src="/assets/fake-pics/3.jpg" alt="We lost this pic">
-          </div>
-          <div class="col">
-            <div class="row">
-              <div class="col">
-                <img src="/assets/fake-pics/4.jpg" alt="We lost this pic">
-              </div>
-              <div class="col">
-                <!-- Left Empty intentionally for white spaces -->
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <img src="/assets/fake-pics/5.jpg" alt="We lost this pic">
-              </div>
-              <div class="col">
-                <img src="/assets/fake-pics/6.jpg" alt="We lost this pic">
-              </div>
-              <div class="col">
-                <img src="/assets/fake-pics/7.jpg" alt="We lost this pic">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <img src="/assets/fake-pics/8.jpg" alt="We lost this pic">
-              </div>
-              <div class="col">
-                <img src="/assets/fake-pics/9.jpg" alt="We lost this pic">
-              </div>
-              <div class="col">
-                <!-- Left Empty intentionally for white spaces -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <img src="/assets/fake-pics/10.jpg" alt="We lost this pic">
-          </div>
-          <div class="col">
-            <img src="/assets/fake-pics/11.jpg" alt="We lost this pic">
-          </div>
-          <div class="col">
-            <!-- Left Empty intentionally for white spaces -->
-          </div>
-        </div>
+        <div class="col"></div>
       </div>
-      
-      <div class="d-lg-none" #Swiper>
-        <swiper [effect]="'coverflow'" [grabCursor]="true" [centeredSlides]="true" [slidesPerView]="'auto'"
-          [coverflowEffect]="{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true}" [pagination]="true" class="mySwiper">
-          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-1.jpg" /></ng-template>
-          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-2.jpg" /></ng-template>
-          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-3.jpg" /></ng-template>
-          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-4.jpg" /></ng-template>
-          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-5.jpg" /></ng-template>
-          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-6.jpg" /></ng-template>
-          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-7.jpg" /></ng-template>
-          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-8.jpg" /></ng-template>
-          <ng-template swiperSlide><img src="https://swiperjs.com/demos/images/nature-9.jpg" /></ng-template>
-        </swiper>
-      </div>
-
     </div>
 
-  </div>
-
-  <div class="col-12 col-xxl-6 text-white">
-    <div class="m-5 p-5">
-      <h4>Tackle Writers' Block</h4>
-      <p>
-        A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often
-        happen due to being stuck with a current project that the writer is trying to complete. By inserting a
-        completely
-        random paragraph from which to begin, it can take down some of the issues that may have been causing the
-        writers'
-        block in the first place.
-      </p>
-      <h4>Tackle Writers' Block</h4>
-      <p>
-        A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often
-        happen due to being stuck with a current project that the writer is trying to complete. By inserting a
-        completely
-        random paragraph from which to begin, it can take down some of the issues that may have been causing the
-        writers'
-        block in the first place.
-      </p>
-      <h4>Tackle Writers' Block</h4>
-      <p>
-        A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often
-        happen due to being stuck with a current project that the writer is trying to complete. By inserting a
-        completely
-        random paragraph from which to begin, it can take down some of the issues that may have been causing the
-        writers'
-        block in the first place.
-      </p>
-      <h4>Tackle Writers' Block</h4>
-      <p>
-        A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often
-        happen due to being stuck with a current project that the writer is trying to complete. By inserting a
-        completely
-        random paragraph from which to begin, it can take down some of the issues that may have been causing the
-        writers'
-        block in the first place.
-      </p>
+    <div class="col-12 col-xxl-5 bg-warning d-flex">
+      <!-- Left intentionally blank for white space -->
+      <div class="bg-light align-self-center text-div">
+        EVENT GALLERY
+      </div>
     </div>
   </div>
 
-  <div class="snow" (click)="onSnowFlakeClick()"></div>
-  <div class="snow" (click)="onSnowFlakeClick()"></div>
-  <div class="snow" (click)="onSnowFlakeClick()"></div>
-  <div class="snow" (click)="onSnowFlakeClick()"></div>
-  <div class="snow" (click)="onSnowFlakeClick()"></div>
-  <div class="snow" (click)="onSnowFlakeClick()"></div>
-  <div class="snow" (click)="onSnowFlakeClick()"></div>
-  <div class="snow" (click)="onSnowFlakeClick()"></div>
-  <div class="snow" (click)="onSnowFlakeClick()"></div>
+  <div class="row first-row d-flex justify-content-center mt-5 pt-5">
+    <div class="col-6 text-center">
+      <img src="/assets/pics/2.png" alt="We lost this pic">
+    </div>
+  </div>
 
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-3 text-center">
+      <img *ngFor="let imageSource of get2dImageSourcesArray()[0]" [src]="'/assets/raw-pics/ ' + imageSource" [alt]="imageSource">
+    </div>
+    <div class="col-3 text-center">
+      <img *ngFor="let imageSource of get2dImageSourcesArray()[1]" [src]="'/assets/raw-pics/ ' + imageSource" [alt]="imageSource">
+    </div>
+    <div class="col-3 text-center">
+      <img *ngFor="let imageSource of get2dImageSourcesArray()[2]" [src]="'/assets/raw-pics/ ' + imageSource" [alt]="imageSource">
+    </div>
+  </div>
 
 </div>

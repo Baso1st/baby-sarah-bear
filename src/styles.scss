@@ -2,37 +2,39 @@
 
 
 //------------ Swiper imports and styles BEGIN:-------------
-@import "~swiper/css";
-@import "~swiper/css/effect-coverflow";
-@import "~swiper/css/pagination";
+// @import "~swiper/css";
+// @import "~swiper/css/effect-coverflow";
+// @import "~swiper/css/pagination";
 
 
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
+// .swiper {
+//   width: 100%;
+//   padding-top: 50px;
+//   padding-bottom: 50px;
+// }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
+// .swiper-slide {
+//   background-position: center;
+//   background-size: cover;
+//   width: 300px;
+//   height: 300px;
+// }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-}
+// .swiper-slide img {
+//   display: block;
+//   width: 100%;
+// }
 
 //------------ Swiper imports and styles END:-------------
 
 
+
 body {
   // height: 100vh;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   // overflow: hidden;
-  filter: drop-shadow(0 0 10px white);
+  background-color: #f9f6f5;
+  // filter: drop-shadow(0 0 10px white);
 }
 
 @function random_range($min, $max) {
@@ -46,9 +48,9 @@ body {
   background-size: cover;
   $total: 200;
   position: absolute;
-  width: 30px;
-  height: 30px;
-  background-image: url('assets/snowflake.png');
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
   border-radius: 50%;
 
   @for $i from 1 through $total {
@@ -79,6 +81,44 @@ body {
     }
   }
 }
+
+.snow-1 {
+  @extend .snow;
+  background-image: url('assets/snowflakes/1.png');
+}
+
+.snow-2 {
+  @extend .snow;
+  background-image: url('assets/snowflakes/2.png');
+}
+.snow-3 {
+  @extend .snow;
+  background-image: url('assets/snowflakes/3.png');
+}
+
+.snow-4 {
+  @extend .snow;
+  background-image: url('assets/snowflakes/4.png');
+}
+.snow-5 {
+  @extend .snow;
+  background-image: url('assets/snowflakes/5.png');
+}
+
+.snow-6 {
+  @extend .snow;
+  background-image: url('assets/snowflakes/6.png');
+}
+.snow-7 {
+  @extend .snow;
+  background-image: url('assets/snowflakes/7.png');
+}
+
+.snow-8 {
+  @extend .snow;
+  background-image: url('assets/snowflakes/8.png');
+}
+
 
 .snow-bear {
   cursor: pointer;

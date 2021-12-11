@@ -28,6 +28,8 @@ export class AppComponent {
   ]
 
   onPageClick() {
+    return;
+
     if (this.isMainAudioPlaying) {
       return
     }

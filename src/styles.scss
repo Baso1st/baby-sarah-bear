@@ -47,11 +47,18 @@ body {
   cursor: pointer;
   background-size: cover;
   $total: 200;
-  position: absolute;
+  // position: absolute;
   width: 50px;
   height: 50px;
-  z-index: 1000;
+  // z-index: 1000;
   border-radius: 50%;
+
+  position:fixed; /*Positions it so it stays when you scroll down*/
+  top:0; /*Makes it full screen*/
+  left:0;
+  right:0;
+  bottom:0;
+  // pointer-events:none; /*Allows the user to click through it*/
 
   @for $i from 1 through $total {
     $random-x: random(1000000) * 0.0001vw;
@@ -65,8 +72,7 @@ body {
     $fall-delay: random(30) * -1s;
 
     &:nth-child(#{$i}) {
-      // opacity: random(10000) * 0.0001;
-      transform: translate($random-x, -10px) scale($random-scale);
+      opacity: random(10000) * 0.0001;
       transform: translate($random-x, -10px) scale($random-scale);
       animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
     }

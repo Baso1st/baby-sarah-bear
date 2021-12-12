@@ -1,5 +1,6 @@
 <div class="main-dev" (click)="onPageClick()">
 
+
   <div class="snow-1" (click)="onSnowFlakeClick()"></div>
   <div class="snow-1" (click)="onSnowFlakeClick()"></div>
   <div class="snow-2" (click)="onSnowFlakeClick()"></div>
@@ -17,13 +18,6 @@
   <div class="snow-8" (click)="onSnowFlakeClick()"></div>
   <div class="snow-8" (click)="onSnowFlakeClick()"></div>
 
-
-
-
-  <!-- <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div>
-  <div class="snow-bear" (click)="onSnowFlakeClick()"></div> -->
 
   <div class="d-none d-xl-block mt-5">
 
@@ -75,16 +69,19 @@
 
   <div class="row third-row d-flex justify-content-center mt-5 mb-5">
     <div class="col-9 col-xl-3 text-center">
-      <img *ngFor="let imageSource of imageSources1" [src]="'/assets/gallery-pics/' + imageSource" [alt]="imageSource"
-        class="mb-4">
+      <div *ngFor="let imageSource of imageSources1">
+        <img [src]="'/assets/gallery-pics/' + imageSource" [alt]="imageSource" class="mb-4">
+      </div>
     </div>
     <div class="col-9 col-xl-3 text-center">
-      <img *ngFor="let imageSource of imageSources2" [src]="'/assets/gallery-pics/' + imageSource" [alt]="imageSource"
-        class="mb-4">
+      <div *ngFor="let imageSource of imageSources2">
+        <img [src]="'/assets/gallery-pics/' + imageSource" [alt]="imageSource" class="mb-4">
+      </div>
     </div>
     <div class="col-9 col-xl-3 text-center">
-      <img *ngFor="let imageSource of imageSources3" [src]="'/assets/gallery-pics/' + imageSource" [alt]="imageSource"
-        class="mb-4">
+      <div *ngFor="let imageSource of imageSources3">
+        <img [src]="'/assets/gallery-pics/' + imageSource" [alt]="imageSource" class="mb-4">
+      </div>
     </div>
   </div>
 

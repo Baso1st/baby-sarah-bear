@@ -65,7 +65,8 @@ body {
     $fall-delay: random(30) * -1s;
 
     &:nth-child(#{$i}) {
-      opacity: random(10000) * 0.0001;
+      // opacity: random(10000) * 0.0001;
+      transform: translate($random-x, -10px) scale($random-scale);
       transform: translate($random-x, -10px) scale($random-scale);
       animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
     }

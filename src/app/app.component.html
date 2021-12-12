@@ -29,35 +29,39 @@
     <div class="col-12 col-xxl-7 first-pic-row">
       <div class="row mt-5 pt-5">
         <div class="col-9">
-          <img src="/assets/pics/1.png" alt="We lost this pic">
+          <img src="/assets/pics/2.png" alt="We lost this pic">
         </div>
         <div class="col"></div>
       </div>
     </div>
 
-    <div class="col-12 col-xxl-5 bg-warning d-flex">
-      <!-- Left intentionally blank for white space -->
-      <div class="bg-light align-self-center text-div">
-        EVENT GALLERY
+    <div class="col-12 col-xxl-5 d-flex">
+      <div class="align-self-center">
+        <div class="main-text-div d-flex justify-content-end">
+          feliz navidad
+        </div>
+        <div class="small-text-div d-flex justify-content-end">
+          It means: Merry Christmas
+        </div>
       </div>
     </div>
   </div>
 
   <div class="row first-row d-flex justify-content-center mt-5 pt-5">
     <div class="col-6 text-center">
-      <img src="/assets/pics/2.png" alt="We lost this pic">
+      <img src="/assets/pics/1.png" alt="We lost this pic">
     </div>
   </div>
 
-  <div class="row d-flex justify-content-center mt-5">
+  <div class="row d-flex justify-content-center mt-5 mb-5">
     <div class="col-3 text-center">
-      <img *ngFor="let imageSource of get2dImageSourcesArray()[0]" [src]="'/assets/raw-pics/ ' + imageSource" [alt]="imageSource">
+      <img *ngFor="let imageSource of imageSources1" [src]="'/assets/raw-pics/' + imageSource" [alt]="imageSource" class="mb-4">
     </div>
     <div class="col-3 text-center">
-      <img *ngFor="let imageSource of get2dImageSourcesArray()[1]" [src]="'/assets/raw-pics/ ' + imageSource" [alt]="imageSource">
+      <img *ngFor="let imageSource of imageSources2" [src]="'/assets/raw-pics/' + imageSource" [alt]="imageSource" class="mb-4">
     </div>
     <div class="col-3 text-center">
-      <img *ngFor="let imageSource of get2dImageSourcesArray()[2]" [src]="'/assets/raw-pics/ ' + imageSource" [alt]="imageSource">
+      <img *ngFor="let imageSource of imageSources3" [src]="'/assets/raw-pics/' + imageSource" [alt]="imageSource" class="mb-4">
     </div>
   </div>
 

@@ -21,10 +21,19 @@ img {
   background-color: #f0edee !important;
 }
 
-.text-div {
-  font-size: 6vw;
+.main-text-div {
+  font-size: 5vw;
   font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.09em;
   font-weight: 900;
   font-style: normal;
+  text-transform: uppercase;
+}
+
+.small-text-div {
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-family: roboto, sans-serif;
+  color: #898ea2;
+  padding-right: 13px !important;
 }

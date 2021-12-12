@@ -26,18 +26,19 @@
   <div class="snow-bear" (click)="onSnowFlakeClick()"></div> -->
 
   <div class="row first-row mt-5">
-    <div class="col-12 col-xxl-7 first-pic-row">
+    <div class="col-12 col-xl-7 first-pic-row">
       <div class="row mt-5 pt-5">
-        <div class="col-9">
+        <div class="col col-xl-9">
           <img src="/assets/pics/2.png" alt="We lost this pic">
         </div>
-        <div class="col"></div>
+        <div class="d-none d-xl-block col"></div>
       </div>
     </div>
 
-    <div class="col-12 col-xxl-5 d-flex">
+    <!-- BEGIN: This div is not visible on mobile-->
+    <div class="col-12 col-xl-5 d-none d-xl-flex">
       <div class="align-self-center">
-        <div class="main-text-div d-flex justify-content-end">
+        <div class="main-text-div">
           feliz navidad
         </div>
         <div class="small-text-div d-flex justify-content-end">
@@ -45,23 +46,41 @@
         </div>
       </div>
     </div>
+    <!-- END: This div is not visible on mobile-->
+
+    <!-- BEGIN: This div is visible on mobile only-->
+    <!-- <div class="col-flex d-xl-none">
+      <div class="align-self-center">
+        <div class="main-text-div text-center">
+          feliz navidad
+        </div>
+        <div class="small-text-div text-center">
+          It means: Merry Christmas
+        </div>
+      </div>
+    </div> -->
+    <!-- END: This div is visible on mobile only-->
+
   </div>
 
-  <div class="row first-row d-flex justify-content-center mt-5 pt-5">
-    <div class="col-6 text-center">
+  <div class="row second-row d-flex justify-content-center mt-5 pt-5">
+    <div class="col-9 col-xl-6 text-center">
       <img src="/assets/pics/1.png" alt="We lost this pic">
     </div>
   </div>
 
-  <div class="row d-flex justify-content-center mt-5 mb-5">
-    <div class="col-3 text-center">
-      <img *ngFor="let imageSource of imageSources1" [src]="'/assets/raw-pics/' + imageSource" [alt]="imageSource" class="mb-4">
+  <div class="row third-row d-flex justify-content-center mt-5 mb-5">
+    <div class="col-9 col-xl-3 text-center">
+      <img *ngFor="let imageSource of imageSources1" [src]="'/assets/raw-pics/' + imageSource" [alt]="imageSource"
+        class="mb-4">
     </div>
-    <div class="col-3 text-center">
-      <img *ngFor="let imageSource of imageSources2" [src]="'/assets/raw-pics/' + imageSource" [alt]="imageSource" class="mb-4">
+    <div class="col-9 col-xl-3 text-center">
+      <img *ngFor="let imageSource of imageSources2" [src]="'/assets/raw-pics/' + imageSource" [alt]="imageSource"
+        class="mb-4">
     </div>
-    <div class="col-3 text-center">
-      <img *ngFor="let imageSource of imageSources3" [src]="'/assets/raw-pics/' + imageSource" [alt]="imageSource" class="mb-4">
+    <div class="col-9 col-xl-3 text-center">
+      <img *ngFor="let imageSource of imageSources3" [src]="'/assets/raw-pics/' + imageSource" [alt]="imageSource"
+        class="mb-4">
     </div>
   </div>
 

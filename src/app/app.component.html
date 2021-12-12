@@ -29,7 +29,7 @@
     <div class="col-12 col-xl-7 first-pic-row">
       <div class="row mt-5 pt-5">
         <div class="col col-xl-9">
-          <img src="/assets/pics/2.png" alt="We lost this pic">
+          <img src="/assets/main-pics/2.png" alt="We lost this pic">
         </div>
         <div class="d-none d-xl-block col"></div>
       </div>
@@ -65,21 +65,21 @@
 
   <div class="row second-row d-flex justify-content-center mt-5 pt-5">
     <div class="col-9 col-xl-6 text-center">
-      <img src="/assets/pics/1.png" alt="We lost this pic">
+      <img src="/assets/main-pics/1.png" alt="We lost this pic">
     </div>
   </div>
 
   <div class="row third-row d-flex justify-content-center mt-5 mb-5">
     <div class="col-9 col-xl-3 text-center">
-      <img *ngFor="let imageSource of imageSources1" [src]="'/assets/raw-pics/' + imageSource" [alt]="imageSource"
+      <img *ngFor="let imageSource of imageSources1" [src]="'/assets/gallery-pics/' + imageSource" [alt]="imageSource"
         class="mb-4">
     </div>
     <div class="col-9 col-xl-3 text-center">
-      <img *ngFor="let imageSource of imageSources2" [src]="'/assets/raw-pics/' + imageSource" [alt]="imageSource"
+      <img *ngFor="let imageSource of imageSources2" [src]="'/assets/gallery-pics/' + imageSource" [alt]="imageSource"
         class="mb-4">
     </div>
     <div class="col-9 col-xl-3 text-center">
-      <img *ngFor="let imageSource of imageSources3" [src]="'/assets/raw-pics/' + imageSource" [alt]="imageSource"
+      <img *ngFor="let imageSource of imageSources3" [src]="'/assets/gallery-pics/' + imageSource" [alt]="imageSource"
         class="mb-4">
     </div>
   </div>

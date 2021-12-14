@@ -61,11 +61,12 @@ export class AppComponent {
     '(7).png',
     '(35).png',
     '(36).png',
-    '(12).png'
+    '(12).png',
+    'poem3.png'
   ]
 
   onPageClick() {
-    // return;
+    return;
 
     if (this.isMainAudioPlaying) {
       return

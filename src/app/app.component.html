@@ -1,4 +1,4 @@
-<div class="main-dev" (click)="onPageClick()">
+<div class="main-dev" >
 
 
   <div class="snow-1" (click)="onSnowFlakeClick()"></div>
@@ -85,4 +85,7 @@
     </div>
   </div>
 
+  <button *ngIf="shouldShowToTheTopButton" (click)="onToTheTopClicked()" class="top-button btn btn-lg btn-secondary">
+    Top
+  </button>
 </div>

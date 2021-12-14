@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, OnChanges, OnInit, SimpleChanges, ViewChild, ViewEncapsulation } from '@angular/core';
 
 import { SwiperComponent } from "swiper/angular";
 
@@ -18,7 +18,7 @@ export class AppComponent {
   isMainAudioPlaying = false;
   clipNumber = 1;
   maximumClipCount = 6;
-
+  shouldShowToTheTopButton = false;
 
   imageSources1 = [
     '(1).png',
@@ -90,4 +90,20 @@ export class AppComponent {
       this.clipNumber = 1;
     }
   }
+
+
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll(event: any) {
+    if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
+      this.shouldShowToTheTopButton = true;
+    } else {
+      this.shouldShowToTheTopButton = false;
+    }
+  }
+
+  onToTheTopClicked() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
 }

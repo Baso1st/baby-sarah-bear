@@ -65,7 +65,7 @@ export class AppComponent {
   ]
 
   onPageClick() {
-    return;
+    // return;
 
     if (this.isMainAudioPlaying) {
       return

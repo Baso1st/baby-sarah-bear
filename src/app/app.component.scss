@@ -8,20 +8,12 @@ img {
   height: auto;
 }
 
-// .col {
-//   padding: 0 !important;
-// }
-
-// .second-image {
-//   z-index: 500 !important;
-//   margin-left: -20px !important;
-// }
 
 .first-pic-row {
   background-color: #f0edee !important;
 }
 
-.main-text-div {
+.main-text {
   font-size: 5vw;
   font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
   letter-spacing: 0.09em;
@@ -30,10 +22,28 @@ img {
   text-transform: uppercase;
 }
 
-.small-text-div {
+.small-text {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   font-family: roboto, sans-serif;
   color: #898ea2;
   padding-right: 13px !important;
+}
+
+
+.main-text-small-screen {
+  font-size: 10vw;
+  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  letter-spacing: 0.09em;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.small-text-small-screen {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: roboto, sans-serif;
+  color: #898ea2;
+  font-size: 3vw;
 }

@@ -1,40 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 
-//------------ Swiper imports and styles BEGIN:-------------
-// @import "~swiper/css";
-// @import "~swiper/css/effect-coverflow";
-// @import "~swiper/css/pagination";
-
-
-// .swiper {
-//   width: 100%;
-//   padding-top: 50px;
-//   padding-bottom: 50px;
-// }
-
-// .swiper-slide {
-//   background-position: center;
-//   background-size: cover;
-//   width: 300px;
-//   height: 300px;
-// }
-
-// .swiper-slide img {
-//   display: block;
-//   width: 100%;
-// }
-
-//------------ Swiper imports and styles END:-------------
-
-
-
 body {
-  // height: 100vh;
-  // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  // overflow: hidden;
   background-color: #f9f6f5;
-  // filter: drop-shadow(0 0 10px white);
 }
 
 @function random_range($min, $max) {
@@ -47,10 +15,8 @@ body {
   cursor: pointer;
   background-size: cover;
   $total: 200;
-  // position: absolute;
   width: 50px;
   height: 50px;
-  // z-index: 1000;
   border-radius: 50%;
 
   position:fixed; /*Positions it so it stays when you scroll down*/

@@ -72,6 +72,7 @@ export class AppComponent {
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll(event: any) {
+    this.playBackgroundMusic();
     if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
       this.shouldShowToTheTopButton = true;
     } else {
@@ -81,6 +82,10 @@ export class AppComponent {
 
   @HostListener('window:click', ['$event']) // for window scroll events
   onPageClick(event: any) {
+    this.playBackgroundMusic();
+  }
+
+  playBackgroundMusic(){
     if (this.isMainAudioPlaying) {
       return
     }

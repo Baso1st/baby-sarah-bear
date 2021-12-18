@@ -9,7 +9,7 @@ export class AppComponent {
 
   isMainAudioPlaying = false;
   clipNumber = 1;
-  maximumClipCount = 6;
+  maximumClipCount = 2;
   shouldShowToTheTopButton = false;
 
   imageSources1 = [
@@ -74,8 +74,9 @@ export class AppComponent {
 
   onSnowFlakeClick() {
     let audio = new Audio();
-    audio.src = `/assets/audio/clip (${this.clipNumber}).wav`;
+    audio.src = `/assets/audio/clip (${this.clipNumber}).mp3`;
     audio.load();
+    audio.volume = 1;
     audio.play();
     this.clipNumber++;
     if (this.clipNumber > this.maximumClipCount) {

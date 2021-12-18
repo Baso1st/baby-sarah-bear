@@ -57,21 +57,6 @@ export class AppComponent {
     'poem3.png'
   ]
 
-  onPageClick() {
-    return;
-
-    if (this.isMainAudioPlaying) {
-      return
-    }
-
-    this.isMainAudioPlaying = true;
-    let mainAudio = new Audio();
-    mainAudio.src = "/assets/audio/JustBecause.mp3";
-    mainAudio.load();
-    mainAudio.play();
-    mainAudio.loop = true;
-  }
-
   onSnowFlakeClick() {
     let audio = new Audio();
     audio.src = `/assets/audio/clip (${this.clipNumber}).mp3`;
@@ -92,6 +77,20 @@ export class AppComponent {
     } else {
       this.shouldShowToTheTopButton = false;
     }
+  }
+
+  @HostListener('window:click', ['$event']) // for window scroll events
+  onPageClick(event: any) {
+    if (this.isMainAudioPlaying) {
+      return
+    }
+
+    this.isMainAudioPlaying = true;
+    let mainAudio = new Audio();
+    mainAudio.src = "/assets/audio/JustBecause.mp3";
+    mainAudio.load();
+    mainAudio.play();
+    mainAudio.loop = true;
   }
 
   onToTheTopClicked() {

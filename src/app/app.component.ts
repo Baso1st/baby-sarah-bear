@@ -26,7 +26,10 @@ export class AppComponent {
     '(9).png',
     '(10).png',
     '(11).png',
-    '(18).png'
+    '(18).png',
+    '(40).png',
+    '(41).png',
+    '(42).png'
   ];
   imageSources2 = [
     '(15).png',
@@ -40,7 +43,10 @@ export class AppComponent {
     '(26).png',
     '(39).png',
     '(38).png',
-    '(37).png'
+    '(37).png',
+    '(44).png',
+    '(45).png',
+    '(46).png'
   ];
   imageSources3 = [
     '(23).png',
@@ -54,6 +60,9 @@ export class AppComponent {
     '(35).png',
     '(36).png',
     '(12).png',
+    '(47).png',
+    '(43).png',
+    '(48).png',
     'poem3.png'
   ]
 

@@ -9,7 +9,7 @@ export class AppComponent {
 
   isMainAudioPlaying = false;
   clipNumber = 1;
-  maximumClipCount = 6;
+  maximumClipCount = 2;
   shouldShowToTheTopButton = false;
 
   imageSources1 = [
@@ -66,25 +66,11 @@ export class AppComponent {
     'poem3.png'
   ]
 
-  onPageClick() {
-    return;
-
-    if (this.isMainAudioPlaying) {
-      return
-    }
-
-    this.isMainAudioPlaying = true;
-    let mainAudio = new Audio();
-    mainAudio.src = "/assets/audio/JustBecause.mp3";
-    mainAudio.load();
-    mainAudio.play();
-    mainAudio.loop = true;
-  }
-
   onSnowFlakeClick() {
     let audio = new Audio();
-    audio.src = `/assets/audio/clip (${this.clipNumber}).wav`;
+    audio.src = `/assets/audio/clip (${this.clipNumber}).mp3`;
     audio.load();
+    audio.volume = 1;
     audio.play();
     this.clipNumber++;
     if (this.clipNumber > this.maximumClipCount) {
@@ -95,11 +81,30 @@ export class AppComponent {
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll(event: any) {
+    this.playBackgroundMusic();
     if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
       this.shouldShowToTheTopButton = true;
     } else {
       this.shouldShowToTheTopButton = false;
     }
+  }
+
+  @HostListener('window:click', ['$event']) // for window scroll events
+  onPageClick(event: any) {
+    this.playBackgroundMusic();
+  }
+
+  playBackgroundMusic(){
+    if (this.isMainAudioPlaying) {
+      return
+    }
+
+    this.isMainAudioPlaying = true;
+    let mainAudio = new Audio();
+    mainAudio.src = "/assets/audio/JustBecause.mp3";
+    mainAudio.load();
+    mainAudio.play();
+    mainAudio.loop = true;
   }
 
   onToTheTopClicked() {

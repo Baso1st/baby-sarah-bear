@@ -1,6 +1,8 @@
 # BabySarahBear
 
-## Sarah's Christmas gift.
+## A personal website built as a gift for a friend
+
+## The site is built using angular
 
 ---------------------------
 

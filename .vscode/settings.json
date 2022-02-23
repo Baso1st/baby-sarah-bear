@@ -26,8 +26,8 @@
                 "host": "ftp.bunheaddesign.com",
                 "port": 21,
                 "secure": false,
-                "user": "ftpbear@babysarahbear.com",
-                "password": "z_#~n4@d^[ju",
+                "user": "", //The user name and password are in keep
+                "password": "",
                 "mappings": [
                     {
                         "source": "/dist",
